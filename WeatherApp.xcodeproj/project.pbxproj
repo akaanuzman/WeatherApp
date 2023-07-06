@@ -11,7 +11,9 @@
 		F13183FC2A2EAD01008CDC90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13183FB2A2EAD01008CDC90 /* ContentView.swift */; };
 		F13183FE2A2EAD01008CDC90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13183FD2A2EAD01008CDC90 /* Assets.xcassets */; };
 		F13184022A2EAD01008CDC90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13184012A2EAD01008CDC90 /* Preview Assets.xcassets */; };
-		F131840C2A2EAD66008CDC90 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131840B2A2EAD66008CDC90 /* OnboardView.swift */; };
+		F18602852A56209400891E6A /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18602842A56209400891E6A /* LocationViewModel.swift */; };
+		F18602872A5622A000891E6A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18602862A5622A000891E6A /* WelcomeView.swift */; };
+		F186028A2A5625F600891E6A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18602892A5625F600891E6A /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +23,9 @@
 		F13183FD2A2EAD01008CDC90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F13183FF2A2EAD01008CDC90 /* WeatherApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherApp.entitlements; sourceTree = "<group>"; };
 		F13184012A2EAD01008CDC90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F131840B2A2EAD66008CDC90 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		F18602842A56209400891E6A /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		F18602862A5622A000891E6A /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F18602892A5625F600891E6A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				F13183FB2A2EAD01008CDC90 /* ContentView.swift */,
-				F131840B2A2EAD66008CDC90 /* OnboardView.swift */,
+				F18602862A5622A000891E6A /* WelcomeView.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -84,8 +88,26 @@
 		F13184092A2EAD13008CDC90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				F18602882A5625E900891E6A /* Components */,
+				F18602832A56208800891E6A /* ViewModels */,
 			);
 			path = Products;
+			sourceTree = "<group>";
+		};
+		F18602832A56208800891E6A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F18602842A56209400891E6A /* LocationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F18602882A5625E900891E6A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F18602892A5625F600891E6A /* LoadingView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18602852A56209400891E6A /* LocationViewModel.swift in Sources */,
 				F13183FC2A2EAD01008CDC90 /* ContentView.swift in Sources */,
-				F131840C2A2EAD66008CDC90 /* OnboardView.swift in Sources */,
 				F13183FA2A2EAD01008CDC90 /* WeatherAppApp.swift in Sources */,
+				F186028A2A5625F600891E6A /* LoadingView.swift in Sources */,
+				F18602872A5622A000891E6A /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
+				DEVELOPMENT_TEAM = T6938DY6DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -321,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
+				DEVELOPMENT_TEAM = T6938DY6DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
