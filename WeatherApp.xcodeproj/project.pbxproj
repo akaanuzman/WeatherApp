@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F109AFBC2A5795CF009ACAFA /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F109AFBB2A5795CF009ACAFA /* .env */; };
+		F109AFC22A583C0D009ACAFA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F109AFC12A583C0D009ACAFA /* .gitignore */; };
+		F109AFC42A583CDA009ACAFA /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F109AFC32A583CDA009ACAFA /* .env */; };
 		F13183FA2A2EAD01008CDC90 /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13183F92A2EAD01008CDC90 /* WeatherAppApp.swift */; };
 		F13183FC2A2EAD01008CDC90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13183FB2A2EAD01008CDC90 /* ContentView.swift */; };
 		F13183FE2A2EAD01008CDC90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13183FD2A2EAD01008CDC90 /* Assets.xcassets */; };
@@ -25,7 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F109AFBB2A5795CF009ACAFA /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		F109AFC12A583C0D009ACAFA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F109AFC32A583CDA009ACAFA /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		F13183F62A2EAD01008CDC90 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13183F92A2EAD01008CDC90 /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
 		F13183FB2A2EAD01008CDC90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,7 +82,8 @@
 				F13183FD2A2EAD01008CDC90 /* Assets.xcassets */,
 				F13183FF2A2EAD01008CDC90 /* WeatherApp.entitlements */,
 				F13184002A2EAD01008CDC90 /* Preview Content */,
-				F109AFBB2A5795CF009ACAFA /* .env */,
+				F109AFC12A583C0D009ACAFA /* .gitignore */,
+				F109AFC32A583CDA009ACAFA /* .env */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -216,10 +219,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F109AFC42A583CDA009ACAFA /* .env in Resources */,
+				F109AFC22A583C0D009ACAFA /* .gitignore in Resources */,
 				F13184022A2EAD01008CDC90 /* Preview Assets.xcassets in Resources */,
 				F13183FE2A2EAD01008CDC90 /* Assets.xcassets in Resources */,
 				F141C9EE2A57911300521119 /* dummyWeatherData.json in Resources */,
-				F109AFBC2A5795CF009ACAFA /* .env in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
