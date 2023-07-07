@@ -9,10 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var locationViewModel = LocationViewModel()
+    var weatherManager = WeatherManager()
+    @State var weather: WeatherModel?
+    
     var body: some View {
         VStack {
             if let location = locationViewModel.location {
-                Text("Your coordinates are: \(location.longitude), \(location.latitude)")
+                if let weather = weather {
+                    Text("Weather data fetched!")
+                } else {
+                    LoadingView().task {
+                        do {
+                            weather = try await weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+                        } catch {
+                            print("Error getting weather: \(error)")
+                        }
+                    }
+                }
             } else {
                 if locationViewModel.isLoading {
                     LoadingView()
