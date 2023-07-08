@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": -74.006,
+        "lat": 40.7143
+    },
+    "weather": [
+        {
+            "id": 711,
+            "main": "Smoke",
+            "description": "smoke",
+            "icon": "50d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 29.55,
+        "feels_like": 29.55,
+        "temp_min": 297.51,
+        "temp_max": 302.13,
+        "pressure": 1013,
+        "humidity": 78
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.69,
+        "deg": 160
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1688689005,
+    "sys": {
+        "type": 2,
+        "id": 2008101,
+        "country": "US",
+        "sunrise": 1688635863,
+        "sunset": 1688689803
+    },
+    "timezone": -14400,
+    "id": 5128581,
+    "name": "New York",
+    "cod": 200
+}
