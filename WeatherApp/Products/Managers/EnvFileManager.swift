@@ -8,7 +8,7 @@
 import Foundation
 
 class EnvFileManager {
-    var apiKey : String = ""
+    var apiKey: String = ""
     func loadApiKeyFromEnvFile() {
         guard let filePath = Bundle.main.path(forResource: ".env", ofType: nil) else {
             fatalError(".env file not found.")
@@ -36,9 +36,8 @@ class EnvFileManager {
             fatalError("Error reading .env file: \(error)")
         }
     }
-    
-    init() {
-        self.loadApiKeyFromEnvFile()
-    }
 
+    init() {
+        loadApiKeyFromEnvFile()
+    }
 }

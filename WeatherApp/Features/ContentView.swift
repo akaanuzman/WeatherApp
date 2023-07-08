@@ -11,12 +11,12 @@ struct ContentView: View {
     @StateObject var locationViewModel = LocationViewModel()
     var weatherManager = WeatherManager()
     @State var weather: WeatherModel?
-    
+
     var body: some View {
         VStack {
             if let location = locationViewModel.location {
                 if let weather = weather {
-                    Text("Weather data fetched!")
+                    WeatherView(weather: weather)
                 } else {
                     LoadingView().task {
                         do {
@@ -34,7 +34,9 @@ struct ContentView: View {
                         .environmentObject(locationViewModel)
                 }
             }
-        }.background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354)).preferredColorScheme(.dark)
+        }
+        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+        .preferredColorScheme(.dark)
     }
 }
 

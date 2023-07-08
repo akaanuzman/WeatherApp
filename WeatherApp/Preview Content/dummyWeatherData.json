@@ -13,8 +13,8 @@
     ],
     "base": "stations",
     "main": {
-        "temp": 299.55,
-        "feels_like": 299.55,
+        "temp": 29.55,
+        "feels_like": 29.55,
         "temp_min": 297.51,
         "temp_max": 302.13,
         "pressure": 1013,
