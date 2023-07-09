@@ -9,21 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var locationViewModel = LocationViewModel()
-    var weatherManager = WeatherManager()
-    @State var weather: WeatherModel?
+    @StateObject var weatherViewModel = WeatherViewModel()
 
     var body: some View {
         VStack {
             if let location = locationViewModel.location {
-                if let weather = weather {
+                if let weather = weatherViewModel.weather {
                     WeatherView(weather: weather)
                 } else {
                     LoadingView().task {
-                        do {
-                            weather = try await weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
-                        } catch {
-                            print("Error getting weather: \(error)")
-                        }
+                        await weatherViewModel.assignCurrentWeather(location: location)
                     }
                 }
             } else {
@@ -35,8 +30,7 @@ struct ContentView: View {
                 }
             }
         }
-        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
-        .preferredColorScheme(.dark)
+        .modifier(ColorScehemeAndBgColorModifier())
     }
 }
 

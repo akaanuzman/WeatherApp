@@ -12,21 +12,20 @@ struct WeatherRowSectionView: View {
     var title: String
     var value: String
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(spacing: SpacingConstants.medium.rawValue) {
             Image(systemName: logo)
                 .font(.title)
-                .frame(width: 20,height: 20)
+                .frame(width: WidthConstants.extraLow.rawValue,height: HeightConstants.low.rawValue)
                 .padding()
-                .background(Color(hue: 1.0, saturation: 0.0, brightness: 0.888))
-                .cornerRadius(50)
+                .background(Color.lightGray)
+                .cornerRadius(CornerRadiusConstants.high.rawValue)
             
-            VStack(alignment: .leading, spacing: 8) {
-                Text(title)
+            VStack(alignment: .leading, spacing: SpacingConstants.small.rawValue) {
+                Text(title.locale())
                     .font(.caption)
                 
                 Text(value)
-                    .bold()
-                    .font(.title)
+                    .modifier(TitleBoldModifier())
             }
         }
     }

@@ -12,29 +12,35 @@ struct WelcomeView: View {
     @EnvironmentObject var locationViewModel: LocationViewModel
     var body: some View {
         VStack {
-            VStack(spacing: 20){
-                Text("Welcome to the Weather App")
-                    .bold()
-                    .font(.title)
-                Text("Please share your current location to get the weather in your area")
+            VStack(spacing: SpacingConstants.medium.rawValue){
+                Text(LocaleKeys.welcomeText.rawValue.locale())
+                    .modifier(TitleBoldModifier())
+                Text(LocaleKeys.welcomteSubtitle.rawValue.locale())
                     .padding()
             }
             .multilineTextAlignment(.center)
             .padding()
             
-            LocationButton(.shareCurrentLocation) {
-                locationViewModel.requestLocation()
-            }
-            .cornerRadius(30)
-            .symbolVariant(.fill)
-            .foregroundColor(.white)
+            LocationButtonView(locationViewModel: _locationViewModel)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .modifier(InfinityWidthHeightModifier())
     }
 }
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
         WelcomeView()
+    }
+}
+
+private struct LocationButtonView: View {
+    @EnvironmentObject var locationViewModel: LocationViewModel
+    var body: some View {
+        LocationButton(.shareCurrentLocation) {
+            locationViewModel.requestLocation()
+        }
+        .cornerRadius(CornerRadiusConstants.normal.rawValue)
+        .symbolVariant(.fill)
+        .foregroundColor(.white)
     }
 }

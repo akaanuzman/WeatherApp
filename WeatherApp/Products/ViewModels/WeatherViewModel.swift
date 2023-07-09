@@ -1,5 +1,5 @@
 //
-//  WeatherManager.swift
+//  WeatherViewModel.swift
 //  WeatherApp
 //
 //  Created by Kaan Uzman on 7/7/23.
@@ -8,8 +8,9 @@
 import CoreLocation
 import Foundation
 
-class WeatherManager {
+class WeatherViewModel: ObservableObject {
     var envFileManager = EnvFileManager()
+    @Published var weather: WeatherModel?
     
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> WeatherModel {
         let apiKey: String = envFileManager.apiKey
@@ -26,5 +27,13 @@ class WeatherManager {
         let decodedData = try JSONDecoder().decode(WeatherModel.self, from: data)
         
         return decodedData
+    }
+    
+    func assignCurrentWeather(location: CLLocationCoordinate2D) async {
+        do {
+            weather = try await getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+        } catch {
+            print("Error getting weather: \(error)")
+        }
     }
 }
