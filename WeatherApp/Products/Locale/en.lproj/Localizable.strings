@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  WeatherApp
+
+  Created by Kaan Uzman on 9/7/23.
+  
+*/
+
+"welcomeText" = "Welcome to the Weather App";
+"welcomeSubtitle" = "Please share your current location to get the weather in your area";
+"weatherNow" = "Weather now";
+"minTemp" = "Min temp";
+"maxTemp" = "Max temp";
+"windSpeed" = "Wind speed";
+"humidity" = "Humidity";
