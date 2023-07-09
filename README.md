@@ -21,7 +21,7 @@ git clone https://github.com/akaanuzman/WeatherApp
 
 ### 🏴󠁧󠁢󠁥󠁮󠁧󠁿 English 
 * #### 👨🏻‍💻 About App
-   * The application basically gets the instant location of the user using CoreLocation in Swift. According to the latitude and longitude of its location, a request is made to [API] (https://openweathermap.org/api) and current weather information is displayed.
+   * The application basically gets the instant location of the user using CoreLocation in Swift. According to the latitude and longitude of its location, a request is made to [API](https://openweathermap.org/api) and current weather information is displayed.
 
 * #### 📁 Folder Structure, Software Architecture and Technical Details
    * The given work has been developed with SwiftUI and a great deal of attention has been paid to clean code software and SOLID principles. In addition, care has been taken to use all the effective features of the Swift programming language and object-oriented programming. The features and flexibility provided by the SwiftUI framework have been tried to be used and applied. MVMM has been used as the Design Pattern and the Atomic Design methodology has been applied in the design part. A localization structure has been established for string data that is not retrieved by the API. On the Github side, a feature-based branch structure was designed in order to become familiar with the branch structure, and after the necessary operations were completed, a pull request was made and merged into the working main branch.
