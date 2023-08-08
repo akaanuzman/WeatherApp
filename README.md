@@ -10,6 +10,13 @@ https://github.com/akaanuzman/WeatherApp/assets/55639112/0c43a3c8-d402-4162-90ae
   * Verilen çalışma SwiftUI ile geliştirilmiş olup temiz kod yazılımına ve SOLID prensiplerine oldukça dikkat edilmeye çalışılmıştır. Ayrıca Swift programlama dilinin ve nesne yönelimli programlamanın tüm efektif özelliklerinin kullanılmasına özen gösterilmiştir. SwiftUI framework'ünün vermiş olduğu özellikler, esneklikler kullanılmaya ve uygulanmaya çalışılmıştır.Design Pattern olarak MVMM kullanılmış olup tasarım kısmında ise Atomic Design metodolijisi uygulanmıştır. API tarafından çekilmeyen string veriler için localizastion yapısı kurulmuştur. Github tarafında ise branch yapısına aşina olunması açısında feature bazlı branch yapısı kurgulanmış ve gerekli işlemler bittikten sonra pull request atılarak çalışma main branch'inde mergelenmiştir.
   * Klasör yapısı olarak tüm uygulama içi sabitlerimiz, modellerimiz, viewmodel sınıflarımız, enum type'larımız viewmodifier'larımız gibi projenin tüm ana hatları products klasörü altında bulunmaktadır. Uygulama içi bulunan tüm ekranlarımız ise views klasörü altında yerini almaktadır.
 
+* #### ✅ Unit Test Senaryoları
+  * Kullanıcının mevcut konumunun alındığı test senaryosu.
+    ![Screenshot 2023-08-08 at 05 21 58](https://github.com/akaanuzman/WeatherApp/assets/55639112/81cf20a0-097c-4a51-8202-e46922f41884)
+  * Kullanıcının mevcut konumuna göre API'dan anlık hava durumunu alan test senaryosu.
+    ![Screenshot 2023-08-08 at 05 31 31](https://github.com/akaanuzman/WeatherApp/assets/55639112/d1ec2b75-abff-4f0a-aa2c-2e5f11fd81a2)
+
+
 ### 📀 Kurulum
 * Projeyi klonlayın
 ```bash
@@ -26,6 +33,12 @@ git clone https://github.com/akaanuzman/WeatherApp
 * #### 📁 Folder Structure, Software Architecture and Technical Details
    * The given work has been developed with SwiftUI and a great deal of attention has been paid to clean code software and SOLID principles. In addition, care has been taken to use all the effective features of the Swift programming language and object-oriented programming. The features and flexibility provided by the SwiftUI framework have been tried to be used and applied. MVMM has been used as the Design Pattern and the Atomic Design methodology has been applied in the design part. A localization structure has been established for string data that is not retrieved by the API. On the Github side, a feature-based branch structure was designed in order to become familiar with the branch structure, and after the necessary operations were completed, a pull request was made and merged into the working main branch.
    * As a folder structure, all the main lines of the project such as our in-app constants, models, viewmodel classes, enum types, viewmodifiers are under the products folder. All our in-app screens are located under the views folder.
+ 
+* #### ✅ Unit Test Scenarios
+   * Test case where the current location of the user is retrieved.
+     ![Screenshot 2023-08-08 at 05 21 58](https://github.com/akaanuzman/WeatherApp/assets/55639112/81cf20a0-097c-4a51-8202-e46922f41884)
+   * Test scenario getting instant weather from API based on user's current location.
+     ![Screenshot 2023-08-08 at 05 31 31](https://github.com/akaanuzman/WeatherApp/assets/55639112/d1ec2b75-abff-4f0a-aa2c-2e5f11fd81a2)
 
 ### 📀 Installation
 * Clone the project
