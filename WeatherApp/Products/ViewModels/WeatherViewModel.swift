@@ -12,9 +12,14 @@ class WeatherViewModel: ObservableObject {
     var envFileManager = EnvFileManager()
     @Published var weather: WeatherModel?
     
-    func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> WeatherModel {
+    /// Get current phone coordinates and fetch weather data
+    /// - Parameters:
+    ///   - latitude: Current latitude
+    ///   - longitude: Current longitude
+    /// - Returns: Get current phone coordinates and it returns weather data
+    private func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> WeatherModel {
         let apiKey: String = envFileManager.apiKey
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)&units=metric") else {
+        guard let url = URL(string: "\(PathConstants.apiBaseUrl.rawValue)/weather?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)&units=metric") else {
             fatalError("Missing URL")
         }
         

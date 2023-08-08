@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 
 class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
-    let manager = CLLocationManager()
+    var manager = CLLocationManager()
     
     @Published var location: CLLocationCoordinate2D?
     @Published var isLoading: Bool = false
